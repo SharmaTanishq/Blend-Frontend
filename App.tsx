@@ -1,55 +1,60 @@
 import React, { useState } from "react";
-import { View,Text,Image,StyleSheet, FlatList } from "react-native";
+import { View,Text,Image,StyleSheet, FlatList, Button } from "react-native";
 
 import 'react-native-get-random-values';
-import { v4 as uuidv4 } from 'uuid';
+import { NavigationContainer } from "@react-navigation/native";
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
+import OnBoarding from "./screens/OnBoarding";
 
-import Header from "./components/Header";
-import ListItem from "./components/ListItem";
 
+function HomeScreen({navigation}:{navigation:any}){
+  const handleClick=()=>{
+    console.log("Custom Click Log",navigation)
+  }
+  return(
+    <View style= {{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+      <Text>HomeScreen</Text>
+      <Button title=" Button" onPress={()=>navigation.navigate('Details Screen')}></Button>
+    </View>
+  )
+}
+function DetailsScreen({navigation}:{navigation:any}){
+  console.log(navigation)
+  return(
+    <View style= {{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+        <Text>Details Screen</Text>
+        <Button title=" Go to details ... Again!" 
+        onPress={()=>navigation.push('Details Screen')}></Button>
+        <Button
+        title="Go back to first screen in stack"
+        onPress={() => navigation.popToTop()}
+      />
+    </View>
+  )
+}
 const App = () =>{
-  const [item,setItems] = useState([
-    {
-      id:uuidv4(),
-      text:'Milk'
-    },
-    {
-      id:uuidv4(),
-      text:'Eggs'
-    },
-    {
-      id:uuidv4(),
-      text:'Bread'
-    },
-    {
-      id:uuidv4(),
-      text:'Juice'
-    }
-  ])
+ const Stack = createNativeStackNavigator()
 
-  React.useEffect(()=>{
-    console.log('Item',item)
-  },[])
+  // React.useEffect(()=>{
+  //   console.log('Item',item)
+  // },[])
 
   return(
-    <View style= {styles.ParentContainer}>
-
-        <Header title={"Shopping List"}/>
-
-          <FlatList
-            data={item}
-            renderItem={({item})=>( <ListItem item={item}/> )}
-          />
-        {/* <Text style={styles.ParentText}>Hello World Again!!</Text>
-        <Image source={{uri:"https://i.pinimg.com/736x/a0/16/2f/a0162f8d26a87252a21fbe6c2e73aaec.jpg"}}
-          style={styles.parentImage}
-        ></Image> */}
-    </View>
+    <NavigationContainer >
+      <Stack.Navigator>
+      <Stack.Screen name="onboarding"  component={OnBoarding} options={{headerShown: false}}/>
+        <Stack.Screen name="HomeScreen" options={{title:"First Page"}}>
+          {(props) => <HomeScreen {...props}/>}
+        </Stack.Screen>
+        <Stack.Screen name="Details Screen" component={DetailsScreen}/>
+        
+      </Stack.Navigator>
+    </NavigationContainer>
   )
 
 }
 
-const styles = StyleSheet.create({
+const styles = StyleSheet.create({ 
   ParentContainer:{
     flex:1,
     paddingTop:35
