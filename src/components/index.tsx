@@ -1,0 +1,5 @@
+export * from './Atoms/Container/Container'
+export {default as Input} from './Atoms/Input/Input'
+export {default as RegistrationHeader } from './Atoms/RegistrationHeader'
+export {default as RegistrationDesc } from './Atoms/RegistrationDesc'
+export {default as Button } from './Atoms/Button'
