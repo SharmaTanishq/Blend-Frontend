@@ -4,9 +4,9 @@ import { View, Text, Image, StyleSheet, FlatList, Button } from "react-native";
 import "react-native-get-random-values";
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
-import OnBoarding from "./screens/OnBoarding";
-import StackNavigator from "./navigation/StackNavigator";
-import ApplicationNavigator from "./navigation/ApplicationNavigator";
+import OnBoarding from "./src/screens/OnBoarding";
+import StackNavigator from "./src/screens/navigation/StackNavigator";
+import ApplicationNavigator from "./src/screens/navigation/ApplicationNavigator";
 
 function HomeScreen({ navigation }: { navigation: any }) {
   const handleClick = () => {

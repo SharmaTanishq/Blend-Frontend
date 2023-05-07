@@ -1,5 +1,5 @@
 /* eslint-disable prettier/prettier */
-import React, { useEffect, useRef, useState } from "react";
+import React, { useRef } from "react";
 import { NavigationContainer } from "@react-navigation/native";
 import StackNavigator from "./StackNavigator";
 

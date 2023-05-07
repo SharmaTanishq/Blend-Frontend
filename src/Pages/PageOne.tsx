@@ -1,7 +1,7 @@
 import { Alert, StyleSheet, Text, View } from 'react-native'
 import React from 'react'
-import Container from '../../components/Atoms/Container/Container'
-import {Button, Input, RegistrationDesc, RegistrationHeader} from '../../components/index'
+import Container from '../components/Atoms/Container/Container'
+import {Button, Input, RegistrationDesc, RegistrationHeader} from '../components/index'
 const PageOne = ({...props}) => {
   
   const [value,setValue] = React.useState('')
