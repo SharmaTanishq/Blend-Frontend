@@ -1,9 +1,8 @@
 import React from "react";
-import { View, Text, StyleSheet, Button } from "react-native";
+import { View, Text, Button } from "react-native";
 import "react-native-get-random-values";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import OnBoarding from "../OnBoarding";
-import EditScreenInfo from "../../components/EditScreenInfo";
 
 function HomeScreen({ navigation }: { navigation: any }) {
   const handleClick = () => {
@@ -35,13 +34,14 @@ function DetailsScreen({ navigation }: { navigation: any }) {
     </View>
   );
 }
+
 const StackNavigator = () => {
   const Stack = createNativeStackNavigator();
 
   return (
     <Stack.Navigator>
       <Stack.Screen
-        name="onboarding"
+        name="Onboarding"
         component={OnBoarding}
         options={{ headerShown: false }}
       />
@@ -54,21 +54,5 @@ const StackNavigator = () => {
     </Stack.Navigator>
   );
 };
-
-const styles = StyleSheet.create({
-  ParentContainer: {
-    flex: 1,
-    paddingTop: 35,
-  },
-  ParentText: {
-    color: "darkslateblue",
-    fontSize: 30,
-  },
-  parentImage: {
-    width: 200,
-    height: 200,
-    borderRadius: 200 / 2,
-  },
-});
 
 export default StackNavigator;

@@ -15,14 +15,13 @@ export const FONT = {
 export const theme = createTheme({
   backgroundColor: "#ffffff",
   colors: {
-    background: "#ffffff",
+    background: "#121212",
     white: "#FFFFFF",
     primary: "#4CA771",
     lightGreen: "#C1E7BB",
     veryLightGreen: "#EAF9E7",
     lightGreenText: "#C0E2BA",
     backgroundGreen: "#DEF4DB",
-    darkText: "#00313A",
     lightText: "#272727",
     lightBlueBg: "#E4F3FF",
     lightGreyText: "#33404F",
@@ -73,21 +72,6 @@ export const theme = createTheme({
     ...globalPallete,
   },
   spacing: {
-    xxs: 2,
-    xs: 6,
-    s: 8,
-    sm: 12,
-    m: 16,
-    ml: 20,
-    l: 24,
-    lm: 28,
-    lml: 30,
-    lx: 34,
-    l2: 32,
-    l3: 36,
-    l4: 48,
-    xl: 40,
-    xxl: 54,
     // new
     s0: 0,
     s2: 2,
@@ -123,7 +107,12 @@ export const theme = createTheme({
     regular10: {
       fontSize: 10,
       fontFamily: FONT.Primary,
-      color: "darkText",
+      color: "white",
+    },
+    regular24: {
+      fontSize: 24,
+      fontFamily: FONT.Primary,
+      color: "white",
     },
     regular10Lightblack: {
       fontSize: 10,
@@ -138,7 +127,7 @@ export const theme = createTheme({
     regular12: {
       fontSize: 12,
       fontFamily: FONT.Primary,
-      color: "darkText",
+      color: "white",
     },
     regular12LightBlack: {
       fontSize: 12,
@@ -153,7 +142,7 @@ export const theme = createTheme({
     regular14: {
       fontSize: 14,
       fontFamily: FONT.Primary,
-      color: "darkText",
+      color: "white",
     },
     regular14LightBlack: {
       fontSize: 14,
@@ -168,12 +157,12 @@ export const theme = createTheme({
     normal: {
       fontSize: 15,
       fontFamily: FONT.Primary,
-      color: "darkText",
+      color: "white",
     },
     regular16: {
       fontSize: 16,
       fontFamily: FONT.Primary,
-      color: "darkText",
+      color: "white",
     },
     regular16LightBlack: {
       fontSize: 16,
@@ -183,7 +172,7 @@ export const theme = createTheme({
     regular18: {
       fontSize: 18,
       fontFamily: FONT.Primary,
-      color: "darkText",
+      color: "white",
     },
   },
   cardVariants: {

@@ -27,7 +27,7 @@ export default function ApplicationNavigator() {
       }}
     >
       <ThemeProvider theme={lightTheme}>
-      <StackNavigator />
+        <StackNavigator />
       </ThemeProvider>
     </NavigationContainer>
   );

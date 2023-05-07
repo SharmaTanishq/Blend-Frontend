@@ -21,7 +21,7 @@ export default index;
 
 const styles = StyleSheet.create({
   button: {
-    flex: 1,
+    // flex: 0.5,
     width: "auto",
     display: "flex",
     alignItems: "center",

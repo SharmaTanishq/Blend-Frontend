@@ -1,7 +1,7 @@
 import { View, StyleSheet } from "react-native";
 import React from "react";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
-import PageOne from "../pages/PageOne";
+import AddEmail from "../pages/AddEmail";
 import SvgComponent from "../assets/images/Icon";
 import PageTwo from "../pages/PageTwo";
 import PageThree from "../pages/PageThree";
@@ -34,7 +34,7 @@ const OnBoarding = () => {
         headerTitle: (props) => <LogoTitle {...props} />,
       }}
     >
-      <Stack.Screen name="AddEmail" component={PageOne}></Stack.Screen>
+      <Stack.Screen name="AddEmail" component={AddEmail}></Stack.Screen>
       <Stack.Screen name="AddName" component={PageTwo}></Stack.Screen>
       <Stack.Screen name="AddBirthday" component={PageThree}></Stack.Screen>
     </Stack.Navigator>
