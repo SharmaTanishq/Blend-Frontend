@@ -1,12 +1,8 @@
-import React, { useState } from "react";
-import { View, Text, Image, StyleSheet, FlatList, Button } from "react-native";
-
+import React from "react";
+import { View, Text, StyleSheet, Button } from "react-native";
 import "react-native-get-random-values";
-import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
-import OnBoarding from "./screens/OnBoarding";
-import StackNavigator from "./navigation/StackNavigator";
-import ApplicationNavigator from "./navigation/ApplicationNavigator";
+import OnBoarding from "../screens/OnBoarding";
 
 function HomeScreen({ navigation }: { navigation: any }) {
   const handleClick = () => {
@@ -38,14 +34,24 @@ function DetailsScreen({ navigation }: { navigation: any }) {
     </View>
   );
 }
-const App = () => {
+const StackNavigator = () => {
   const Stack = createNativeStackNavigator();
 
-  // React.useEffect(()=>{
-  //   console.log('Item',item)
-  // },[])
-
-  return <ApplicationNavigator />;
+  return (
+    <Stack.Navigator>
+      <Stack.Screen
+        name="onboarding"
+        component={OnBoarding}
+        options={{ headerShown: false }}
+      />
+      <Stack.Screen
+        name="HomeScreen"
+        options={{ title: "First Page" }}
+        component={HomeScreen}
+      />
+      <Stack.Screen name="Details Screen" component={DetailsScreen} />
+    </Stack.Navigator>
+  );
 };
 
 const styles = StyleSheet.create({
@@ -64,4 +70,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default App;
+export default StackNavigator;
