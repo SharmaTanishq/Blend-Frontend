@@ -3,6 +3,7 @@ import { View, Text, StyleSheet, Button } from "react-native";
 import "react-native-get-random-values";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import OnBoarding from "../OnBoarding";
+import EditScreenInfo from "../../components/EditScreenInfo";
 
 function HomeScreen({ navigation }: { navigation: any }) {
   const handleClick = () => {

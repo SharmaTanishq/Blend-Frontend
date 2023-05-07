@@ -1,10 +1,10 @@
 import { View, StyleSheet } from "react-native";
 import React from "react";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
-import PageOne from "../Pages/PageOne";
-import SvgComponent from "../../assets/images/Icon";
-import PageTwo from "../Pages/PageTwo";
-import PageThree from "../Pages/PageThree";
+import PageOne from "../pages/PageOne";
+import SvgComponent from "../assets/images/Icon";
+import PageTwo from "../pages/PageTwo";
+import PageThree from "../pages/PageThree";
 
 function LogoTitle(props: any) {
   return (

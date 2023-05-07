@@ -8,7 +8,7 @@ type Props = {}
 const PageTwo = ({...props}) => {
     const [value,setValue] = React.useState('')
   const handleClick=()=>{
-    value? props.navigation.navigate('addBirthday'):Alert.alert('Please Enter Value')
+    value? props.navigation.navigate('AddBirthday'):Alert.alert('Please Enter Value')
   }
   return (
     <Container>
