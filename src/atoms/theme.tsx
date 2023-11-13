@@ -4,12 +4,13 @@ import { Platform } from "react-native";
 const globalPallete = {};
 
 export const FONT = {
-  //   PrimaryExtraLight: "TitilliumWeb-ExtraLight", // 200
-  //   PrimaryLight: "TitilliumWeb-Light", // 300
-  Primary: "space-mono", // 400
-  //   PrimarySemiBold: "TitilliumWeb-SemiBold", // 600
-  //   PrimaryBold: "TitilliumWeb-Bold", // 700
-  //   PrimaryHeavy: "TitilliumWeb-Black", // 900
+  PrimaryExtraLight: "Metropolis-ExtraLight", // 200
+  PrimaryLight: "Metropolis-Light", // 300
+  // Primary: 'Metropolis-Regular', // 400
+  Primary: "Metropolis-Medium", // 500
+  PrimarySemiBold: "Metropolis-SemiBold", // 600
+  PrimaryBold: "Metropolis-Bold", // 700
+  PrimaryHeavy: "Metropolis-Black", // 900
 };
 
 export const theme = createTheme({
@@ -17,7 +18,7 @@ export const theme = createTheme({
   colors: {
     background: "#121212",
     white: "#FFFFFF",
-    primary: "#4CA771",
+    primary: "#9168F6",
     lightGreen: "#C1E7BB",
     veryLightGreen: "#EAF9E7",
     lightGreenText: "#C0E2BA",
@@ -52,23 +53,11 @@ export const theme = createTheme({
     lightGreenQuestionBg: "#F6FAF7",
     orange: "#FEAF00",
     ultraLightGreen: "#F6FAF6",
-    conservativeTextColor: "#1EA614",
-    conservativeBackgroundColor: "#E8F6E7",
-    moderatelyConservativeTextColor: "#9FCC00",
-    moderatelyConservativeBackgroundColor: "#F5FAE5",
-    balancedTextColor: "#FEAF00",
-    balancedBackgroundColor: "#FFF8E5",
-    aggressiveTextColor: "#FE2A00",
-    aggressiveBackgroundColor: "#FFEAE5",
-    moderatelyAggressiveTextColor: "#FF8800",
-    moderatelyAggressiveBackgroundColor: "#FFF3E5",
     inputGrey: "#F5F5F5",
     orangeText: "#F79321",
-    ziRed: "#EC1F26",
-    ziYellow: "#F79321",
-    ziGreen: "#4CA771",
-    sendFundsBoxColor: "#FFEAE6",
-    buyFundsBoxColor: "#E9F6E8",
+    darkText: "#00313A",
+    textInputBg: "#292929",
+    progressBarBg: "#acacac",
     ...globalPallete,
   },
   spacing: {
@@ -109,20 +98,15 @@ export const theme = createTheme({
       fontFamily: FONT.Primary,
       color: "white",
     },
-    regular24: {
-      fontSize: 24,
-      fontFamily: FONT.Primary,
-      color: "white",
-    },
     regular10Lightblack: {
       fontSize: 10,
       fontFamily: FONT.Primary,
-      color: "lightBlack",
+      color: "white",
     },
     regular12Lightblack: {
       fontSize: 12,
       fontFamily: FONT.Primary,
-      color: "lightBlack",
+      color: "white",
     },
     regular12: {
       fontSize: 12,
@@ -132,12 +116,12 @@ export const theme = createTheme({
     regular12LightBlack: {
       fontSize: 12,
       fontFamily: FONT.Primary,
-      color: "lightBlack",
+      color: "white",
     },
     regular12Grey: {
       fontSize: 12,
       fontFamily: FONT.Primary,
-      color: "grey",
+      color: "white",
     },
     regular14: {
       fontSize: 14,
@@ -147,17 +131,12 @@ export const theme = createTheme({
     regular14LightBlack: {
       fontSize: 14,
       fontFamily: FONT.Primary,
-      color: "lightBlack",
+      color: "white",
     },
     regular14LightGrey: {
       fontSize: 14,
       fontFamily: FONT.Primary,
       color: "lightGrey",
-    },
-    normal: {
-      fontSize: 15,
-      fontFamily: FONT.Primary,
-      color: "white",
     },
     regular16: {
       fontSize: 16,
@@ -172,7 +151,187 @@ export const theme = createTheme({
     regular18: {
       fontSize: 18,
       fontFamily: FONT.Primary,
+      color: "darkText",
+    },
+    semiBold9: {
+      fontSize: 9,
+      fontFamily: FONT.PrimarySemiBold,
+      color: "darkBlueText",
+    },
+    semiBold12: {
+      fontSize: 12,
+      fontFamily: FONT.PrimarySemiBold,
+      color: "darkBlueText",
+    },
+    bottomTabText: {
+      fontSize: 10,
+      fontFamily: FONT.PrimarySemiBold,
+      color: "darkBlueText",
+    },
+    semiBold12DarkText: {
+      fontSize: 12,
+      fontFamily: FONT.PrimarySemiBold,
+      color: "darkText",
+    },
+    semiBold12LightBlack: {
+      fontSize: 12,
+      fontFamily: FONT.PrimarySemiBold,
+      color: "lightBlack",
+    },
+    semiBold10: {
+      fontSize: 10,
+      fontFamily: FONT.PrimarySemiBold,
+      color: "darkBlueText",
+    },
+    semiBold16: {
+      fontSize: 16,
+      fontFamily: FONT.PrimarySemiBold,
       color: "white",
+    },
+    semiBold18: {
+      fontSize: 18,
+      fontFamily: FONT.PrimarySemiBold,
+      color: "darkBlueText",
+    },
+    semiBold24: {
+      fontSize: 24,
+      fontFamily: FONT.PrimarySemiBold,
+      color: "darkBlueText",
+    },
+    semiBold14: {
+      fontSize: 14,
+      fontFamily: FONT.PrimarySemiBold,
+      color: "darkBlueText",
+    },
+    semiBold14Green: {
+      fontSize: 14,
+      fontFamily: FONT.PrimarySemiBold,
+      color: "green",
+    },
+    bold8: {
+      fontSize: 8,
+      fontFamily: FONT.PrimaryBold,
+      color: "darkText",
+    },
+    bold10: {
+      fontSize: 10,
+      fontFamily: FONT.PrimaryBold,
+      color: "darkText",
+    },
+    bold12: {
+      fontSize: 12,
+      fontFamily: FONT.PrimaryBold,
+      color: "darkText",
+    },
+    bold14: {
+      fontSize: 14,
+      fontFamily: FONT.PrimaryBold,
+      color: "darkText",
+    },
+    bold20: {
+      fontSize: 20,
+      fontFamily: FONT.PrimaryBold,
+      color: "darkText",
+    },
+    bold20DarkBlue: {
+      fontSize: 20,
+      fontFamily: FONT.PrimaryBold,
+      color: "darkBlueText",
+    },
+    bold24: {
+      fontSize: 24,
+      fontFamily: FONT.PrimaryBold,
+      color: "darkText",
+      fontWeight: "700",
+    },
+    bold14LightBlack: {
+      fontSize: 14,
+      fontFamily: FONT.PrimaryBold,
+      color: "lightBlack",
+    },
+    semiBold14LightBlack: {
+      fontSize: 14,
+      fontFamily: FONT.PrimaryBold,
+      color: "lightBlack",
+    },
+    bold14Green: {
+      fontSize: 14,
+      fontFamily: FONT.PrimaryBold,
+      color: "green",
+    },
+    bold16: {
+      fontSize: 16,
+      fontFamily: FONT.PrimaryBold,
+      color: "white",
+    },
+    bold16Green: {
+      fontSize: 16,
+      fontFamily: FONT.PrimaryBold,
+      color: "green",
+    },
+    bold16DarkBlue: {
+      fontSize: 16,
+      fontFamily: FONT.PrimaryBold,
+      color: "darkBlueText",
+    },
+    bold16LightBlack: {
+      fontSize: 16,
+      fontFamily: FONT.PrimaryBold,
+      color: "darkText",
+    },
+    bold18: {
+      fontSize: 18,
+      fontFamily: FONT.PrimaryBold,
+      color: "darkText",
+      // fontWeight: '700',
+    },
+    bold18LightBlack: {
+      fontSize: 18,
+      fontFamily: FONT.PrimaryBold,
+      color: "lightBlack",
+    },
+    darkBlueBold18: {
+      fontSize: 18,
+      fontFamily: FONT.PrimaryBold,
+      color: "darkBlueText",
+    },
+    bold22: {
+      fontSize: 22,
+      fontFamily: FONT.PrimaryBold,
+      color: "darkText",
+    },
+    bold28: {
+      fontSize: 28,
+      fontFamily: FONT.PrimaryBold,
+      color: "white",
+    },
+    bold40: {
+      fontSize: 40,
+      fontFamily: FONT.PrimaryBold,
+      color: "darkText",
+    },
+    bold32: {
+      fontSize: 32,
+      fontFamily: FONT.PrimaryBold,
+      color: "white",
+    },
+    bold36: {
+      fontSize: 36,
+      fontFamily: FONT.PrimaryBold,
+      color: "white",
+    },
+    normal: {
+      fontSize: 14,
+      fontFamily: FONT.Primary,
+      color: "black",
+    },
+    onBoardingText: {
+      fontSize: 32,
+      // fontFamily: FONT.PrimaryBold,
+      color: "darkText",
+      textAlign: "center",
+      paddingTop: "s40",
+      lineHeight: 34,
     },
   },
   cardVariants: {
@@ -243,6 +402,15 @@ export const theme = createTheme({
       borderWidth: 1,
       borderRadius: 8,
       padding: "s16",
+    },
+    textInput: {
+      backgroundColor: "#292929",
+      height: 54,
+      width: "100%",
+      borderRadius: 8,
+      paddingLeft: 16,
+      fontSize: 16,
+      fontFamily: FONT.Primary,
     },
   },
 });

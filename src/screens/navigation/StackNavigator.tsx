@@ -3,6 +3,7 @@ import { View, Text, Button } from "react-native";
 import "react-native-get-random-values";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import OnBoarding from "../OnBoarding";
+import OnBoardingScreens from "../onBoarding/OnBoardingScreens";
 
 function HomeScreen({ navigation }: { navigation: any }) {
   const handleClick = () => {
@@ -39,7 +40,12 @@ const StackNavigator = () => {
   const Stack = createNativeStackNavigator();
 
   return (
-    <Stack.Navigator>
+    <Stack.Navigator
+      screenOptions={{
+        headerShown: false,
+      }}
+    >
+      <Stack.Screen name="OnBoardingScreens" component={OnBoardingScreens} />
       <Stack.Screen
         name="Onboarding"
         component={OnBoarding}
@@ -50,7 +56,6 @@ const StackNavigator = () => {
         options={{ title: "First Page" }}
         component={HomeScreen}
       />
-      <Stack.Screen name="Details Screen" component={DetailsScreen} />
     </Stack.Navigator>
   );
 };

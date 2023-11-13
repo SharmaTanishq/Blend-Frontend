@@ -16,9 +16,10 @@ const AddEmail = ({ ...props }) => {
   console.log("insets: ", insets);
   const [value, setValue] = React.useState("");
   const handleClick = () => {
-    value
-      ? props.navigation.navigate("AddName")
-      : Alert.alert("Please Enter Value");
+    // value
+    // ?
+    props.navigation.navigate("AddName");
+    // : Alert.alert("Please Enter Value");
   };
 
   return (
